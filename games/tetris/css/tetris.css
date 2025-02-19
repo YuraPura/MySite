@@ -1,0 +1,129 @@
+/* Общие стили и сброс отступов */
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #222;
+  margin: 0;
+  font-family: sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+/* Адаптивный холст для игры */
+#tetris {
+  background: #000;
+  border: 2px solid #555;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  image-rendering: pixelated;
+}
+.canvas-wrapper {
+  position: relative;
+  width: 240px;
+  height: 400px;
+}
+.canvas-wrapper canvas {
+  width: 100%;
+  height: 100%;
+}
+/* Блок информации: счёт, уровень и предпросмотр следующей фигуры */
+.info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.info .next {
+  margin-top: 10px;
+}
+.info canvas {
+  background: #000;
+  border: 1px solid #555;
+  display: block;
+  margin-top: 5px;
+}
+/* Меню игры (только кнопка «Старт») */
+#menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  text-align: center;
+  padding: 20px;
+}
+#menu-overlay h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#menu-overlay label {
+  font-size: 1.2em;
+}
+#menu-overlay select,
+#menu-overlay button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin: 10px;
+}
+/* Мобильные элементы управления (набор кнопок) */
+#mobile-controls {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: none; /* Показываем только на touch-устройствах */
+  text-align: center;
+}
+#mobile-controls .control-row {
+  margin: 5px;
+}
+#mobile-controls button {
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #555;
+  color: #fff;
+}
+#mobile-controls button:active {
+  background: #888;
+}
+/* Медиазапрос для небольших экранов */
+@media (max-width: 480px) {
+  .info {
+    font-size: 16px;
+    top: 10px;
+    left: 10px;
+  }
+  #menu-overlay h1 {
+    font-size: 2em;
+  }
+  #menu-overlay label,
+  #menu-overlay select,
+  #menu-overlay button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+  #mobile-controls button {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}

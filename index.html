@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Игровой портал</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Добро пожаловать на Игровой Портал!</h1>
+      <p>Выберите игру и начинайте играть прямо сейчас</p>
+    </header>
+    <div class="container">
+      <h2>Список игр</h2>
+      <div class="games-list">
+        <!-- Карточка Тетриса -->
+        <div class="game-card">
+          <img src="img/tetris.jpg" alt="Tetris" />
+          <div class="game-content">
+            <h3 class="game-title">Тетрис</h3>
+            <p class="game-description">
+              Классическая аркадная игра, в которой нужно собирать линии,
+              укладывая падающие блоки.
+            </p>
+            <a class="play-btn" href="games/tetris/html/tetris.html">Сыграть в Тетрис</a>
+          </div>
+        </div>
+        <!-- Пример других игр -->
+        <div class="game-card">
+          <img src="#" alt="Space Invaders" />
+          <div class="game-content">
+            <h3 class="game-title">Space Invaders</h3>
+            <p class="game-description">
+              Защитите Землю от нашествия пришельцев в этой классической аркаде.
+            </p>
+            <a class="play-btn" href="#">Играть</a>
+          </div>
+        </div>
+        <div class="game-card">
+          <img src="#" alt="Pac-Man" />
+          <div class="game-content">
+            <h3 class="game-title">Pac-Man</h3>
+            <p class="game-description">
+              Пройдите лабиринты, собирая точки и избегая призраков.
+            </p>
+            <a class="play-btn" href="#">Играть</a>
+          </div>
+        </div>
+        <!-- Добавляйте новые карточки игр по мере необходимости -->
+      </div>
+    </div>
+  </body>
+</html>
