@@ -1,0 +1,24 @@
+/* О нас */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .features-list li {
+    padding: 8px 0;
+    font-size: 0.95em;
+  }
+  
+  .history-text {
+    text-align: justify;
+    line-height: 1.7;
+}

@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#score,
+#lives {
+  margin: 10px;
+  font-size: 20px;
+}
+#gameCanvas {
+  background-color: black;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+#controls {
+  margin-top: 10px;
+}
+select,
+button {
+  margin: 0 5px;
+  font-size: 16px;
+}

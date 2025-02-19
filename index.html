@@ -5,16 +5,34 @@
     <title>Игровой портал</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="img/logo.jpg" type="image/jpg" />
   </head>
   <body>
     <header>
-      <h1>Добро пожаловать на Игровой Портал!</h1>
-      <p>Выберите игру и начинайте играть прямо сейчас</p>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="header-top">
+            <a href="index.html" class="logo">🎮 Игры</a>
+            <ul class="nav-links">
+              <li><a href="#home">Главная</a></li>
+              <li><a href="#games">Игры</a></li>
+              <li><a href="linknav/onas.html">О нас</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+          </div>
+          <div class="header-content">
+            <h1>Добро пожаловать на Игровой Портал!</h1>
+            <p>Выберите игру и начинайте играть прямо сейчас</p>
+          </div>
+        </div>
+      </nav>
     </header>
+
     <div class="container">
       <h2>Список игр</h2>
       <div class="games-list">
-        <!-- Карточка Тетриса -->
+        <!-- Оригинальные карточки игр -->
         <div class="game-card">
           <img src="img/tetris.jpg" alt="Tetris" />
           <div class="game-content">
@@ -23,32 +41,63 @@
               Классическая аркадная игра, в которой нужно собирать линии,
               укладывая падающие блоки.
             </p>
-            <a class="play-btn" href="games/tetris/html/tetris.html">Сыграть в Тетрис</a>
+            <a class="play-btn" href="games/tetris/html/tetris.html"
+              >Сыграть в Тетрис</a
+            >
           </div>
         </div>
-        <!-- Пример других игр -->
         <div class="game-card">
-          <img src="#" alt="Space Invaders" />
+          <img src="img/404.webp" alt="Space Invaders" />
           <div class="game-content">
             <h3 class="game-title">Space Invaders</h3>
-            <p class="game-description">
-              Защитите Землю от нашествия пришельцев в этой классической аркаде.
-            </p>
+            <p class="game-description">В работе!</p>
             <a class="play-btn" href="#">Играть</a>
           </div>
         </div>
         <div class="game-card">
-          <img src="#" alt="Pac-Man" />
+          <img src="img/PacMan.png" alt="Pac-Man" />
           <div class="game-content">
             <h3 class="game-title">Pac-Man</h3>
             <p class="game-description">
               Пройдите лабиринты, собирая точки и избегая призраков.
             </p>
+            <a class="play-btn" href="games/PacMan/html/PacMan.html">Играть</a>
+          </div>
+        </div>
+        <div class="game-card">
+          <img src="img/404.webp" alt="404" />
+          <div class="game-content">
+            <h3 class="game-title">404</h3>
+            <p class="game-description">404</p>
             <a class="play-btn" href="#">Играть</a>
           </div>
         </div>
-        <!-- Добавляйте новые карточки игр по мере необходимости -->
+        <div class="game-card">
+          <img src="img/404.webp" alt="404" />
+          <div class="game-content">
+            <h3 class="game-title">404</h3>
+            <p class="game-description">404</p>
+            <a class="play-btn" href="#">Играть</a>
+          </div>
+        </div>
+        <div class="game-card">
+          <img src="img/404.webp" alt="404" />
+          <div class="game-content">
+            <h3 class="game-title">404</h3>
+            <p class="game-description">404</p>
+            <a class="play-btn" href="#">Играть</a>
+          </div>
+        </div>
+        <div class="game-card">
+          <img src="img/404.webp" alt="404" />
+          <div class="game-content">
+            <h3 class="game-title">404</h3>
+            <p class="game-description">404</p>
+            <a class="play-btn" href="#">Играть</a>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
