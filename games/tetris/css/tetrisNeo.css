@@ -1,0 +1,160 @@
+/* Общие стили и сброс отступов */
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #225;
+  margin: 0;
+  font-family: monospace;
+  color: #61dafb;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+/* Адаптивный холст для игры */
+#tetris {
+  background: #022;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  image-rendering: pixelated;
+}
+.canvas-wrapper {
+  position: relative;
+  width: 240px;
+  height: 400px;
+}
+.canvas-wrapper canvas {
+  width: 100%;
+  height: 100%;
+}
+/* Блок информации: счёт, уровень и предпросмотр следующей фигуры */
+.info {
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.info .next {
+  margin-top: 10px;
+}
+.info canvas {
+  background: #022;
+  display: block;
+  margin-top: 5px;
+}
+/* Меню игры (только кнопка «Старт») */
+#menu-overlay h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+#menu-overlay label {
+  font-size: 1.2em;
+}
+#menu-overlay select,
+#menu-overlay button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin: 10px;
+}
+/* Мобильные элементы управления (набор кнопок) */
+#mobile-controls {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: none; /* Показываем только на touch-устройствах */
+  text-align: center;
+}
+#mobile-controls .control-row {
+  margin: 5px;
+}
+#mobile-controls button {
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background: #555;
+  color: #fff;
+  flex-direction: column;
+}
+#mobile-controls button:active {
+  background: #888;
+}
+/* Медиазапрос для небольших экранов */
+@media (max-width: 480px) {
+  .info {
+    font-size: 16px;
+    top: 10px;
+    left: 10px;
+  }
+  #menu-overlay h1 {
+    font-size: 2em;
+  }
+  #menu-overlay label,
+  #menu-overlay select,
+  #menu-overlay button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+  #mobile-controls button {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}
+
+.boxxx {
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 80%;
+  max-height: 80%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: 5px solid;
+  border-image: linear-gradient(0deg, rgb(26, 13, 13), rgb(53, 53, 53)) 1;
+  padding: 20px;
+  background: #333946;
+}
+
+.btn {
+  flex: 0 0 auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 70px;
+}
+
+.field {
+  display: flex;
+  transform: scale(1.5);
+}
+
+.back-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #225; /* Цвет фона */
+  z-index: 999; /* Чуть меньше, чем у .boxxx */
+}
+
+canvas {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}

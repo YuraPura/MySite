@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тетрис на JS</title>
+  <link rel="stylesheet" href="../css/tetrisNeo.css">
+</head>
+<body>
+  <!-- Блок информации -->
+   <div class="field">
+    <div class="info">
+      <canvas id="hud" width="160" height="75"></canvas>
+      <div class="next">
+        <canvas id="next" width="120" height="120"></canvas>
+      </div>
+    </div>
+  
+  <!-- Обёртка для игрового холста -->
+    <div class="canvas-wrapper">
+      <canvas id="tetris" width="240" height="400"></canvas>
+    </div>
+  </div>
+
+  <!-- Меню игры -->
+<div class="back-overlay"></div>
+  <div id="menu-overlay" class="boxxx">
+    <h1>Тетрис</h1>
+    <div>
+      <label for="difficulty">Сложность: </label>
+      <select id="difficulty">
+        <option value="1000">Лёгкий</option>
+        <option value="700">Средний</option>
+        <option value="400">Сложный</option>
+      </select>
+    </div>
+    <div>
+      <button class="btn" id="start-btn">Старт</button>
+    </div>
+    <div>
+      <p>
+      Управление: <br>
+      ^ - поворот <br>
+      пробел - быстрое падение (hard  drop) <br>
+      ESC - пауза
+      </p>
+    </div>
+  </div>
+
+  <!-- Мобильные элементы управления (кнопки) -->
+  <div id="mobile-controls">
+    <div class="control-row">
+      <button id="rotate-btn">⟳</button>
+    </div>
+    <div class="control-row">
+      <button id="left-btn">←</button>
+      <button id="down-btn">↓</button>
+      <button id="right-btn">→</button>
+    </div>
+    <div class="control-row">
+      <button id="harddrop-btn">⮟</button>
+    </div>
+  </div>
+  <script src="../JS/tetrisNeo.js"></script>
+</body>
+</html>
